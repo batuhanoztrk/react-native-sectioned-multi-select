@@ -140,6 +140,14 @@ export interface SectionedMultiSelectProps<ItemType> {
     ReactNative.FlatListProps<ItemType>,
     'data' | 'renderItem'
   >
+  itemLabelComponent?: (
+    label: string,
+    DefaultComponent: (label?: string) => React.ReactNode
+  ) => React.ReactNode
+  subItemLabelComponent?: (
+    label: string,
+    DefaultComponent: (label?: string) => React.ReactNode
+  ) => React.ReactNode
 
   icons?: Partial<{
     search: IconProps
